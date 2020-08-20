@@ -22,7 +22,7 @@ classifiers = [
 nannernest = 'nannernest.cli:app'
 
 [tool.poetry.dependencies]
-python = ">=3.6.1"
+python = "^3.7"
 typer = "^0.3.1"
 sympy = "^1.6.1"
 seaborn = "^0.10.1"
