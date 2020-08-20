@@ -10,17 +10,21 @@ A small package for optimizing banana coverage on peanut butter and banana sandw
 
 ## Installation
 
-Unfortunately, one of the dependencies `nest2D` requires [boost](https://www.boost.org/) and [cmake](https://cmake.org/), so you have to install these ahead of time. I installed them on my Mac as follows:
+Unfortunately, one of the dependencies, [nest2D](https://github.com/markfink/nest2D), is a pain to install (it has a bunch of C dependencies), so I am unable to publish this package to PyPi right now. I have an open [PR](https://github.com/markfink/nest2D/pull/2) to hopefully solve some of the C issues, and then I will publish to PyPi.
+
+In the meantime, you can install the package locally.
+ 
+ First, install [boost](https://www.boost.org/) and [cmake](https://cmake.org/). I installed them on my Mac as follows:
 
 ```commandline
 conda install cmake
 brew install boost
 ```
 
-After that, 
+After that, git clone this repo and use [poetry](https://python-poetry.org/docs/) to install the package.
 
 ```commandline
-pip install nannernest
+poetry install
 ```
 
 
