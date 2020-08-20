@@ -19,6 +19,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Install boost
+      run: sudo apt-get update && sudo apt-get install -yq libboost1.65-dev
       
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
