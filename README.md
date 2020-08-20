@@ -1,5 +1,9 @@
 # nannernest
 
+![Python package](https://github.com/EthanRosenthal/nannernest/workflows/Python%20package/badge.svg?branch=master)
+
+A small package for optimizing banana coverage on peanut butter and banana sandwiches.
+
 
 ![assets/perfect_sandwich.jpg](assets/perfect_sandwich.jpg)
 
