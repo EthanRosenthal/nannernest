@@ -34,7 +34,7 @@ torch = "^1.6.0"
 torchvision = "^0.7.0"
 scipy = "^1.5.2"
 scikit-image = "^0.17.2"
-nest2D = { git = "git@github.com:EthanRosenthal/nest2D.git", branch = "download-dependencies" }
+nest2D = { git = "https://github.com/EthanRosenthal/nest2D.git", branch = "download-dependencies" }
 colorama = "^0.4.3"
 click-spinner = "^0.1.10"
 
