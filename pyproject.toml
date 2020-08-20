@@ -2,7 +2,21 @@
 name = "nannernest"
 version = "0.1.0"
 description = "Arrange banana slices on a piece of bread in order to optimize banana coverage."
-authors = ["EthanRosenthal <ethan@ethanrosenthal.com>"]
+authors = ["Ethan Rosenthal <ethan@ethanrosenthal.com>"]
+readme = "README.md"
+homepage = "https://github.com/EthanRosenthal/nannernest"
+repository = "https://github.com/EthanRosenthal/nannernest"
+keywords = ["deep learning", "machine learning", "peanut butter", "banana", "sandwich"]
+license = "MIT"
+include = [
+    "LICENSE"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
 
 [tool.poetry.scripts]
 nannernest = 'nannernest.cli:app'
