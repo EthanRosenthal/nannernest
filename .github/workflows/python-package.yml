@@ -47,7 +47,10 @@ jobs:
         poetry config virtualenvs.path ~/.virtualenvs
 
     - name: Install Dependencies
-      run: poetry install
+      run: |
+        # Install nest2D fork first
+        pip install git+https://github.com/EthanRosenthal/nest2D.git@download-dependencies
+        poetry install
       if: steps.cache.outputs.cache-hit != 'true'
 
     - name: Check that black passes
