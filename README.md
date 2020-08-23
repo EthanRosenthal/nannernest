@@ -34,7 +34,7 @@ pip install git+https://github.com/EthanRosenthal/nest2D.git@download-dependenci
 Finally, pip install `nannernest`
 
 ```commandline
-pip install nannenest
+pip install nannernest
 ```
 
 ## Usage
