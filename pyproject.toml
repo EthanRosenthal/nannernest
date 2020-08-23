@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nannernest"
-version = "0.1.1"
+version = "0.1.2"
 description = "Optimal peanut butter and banana sandwiches"
 authors = ["Ethan Rosenthal <ethan@ethanrosenthal.com>"]
 readme = "README.md"
@@ -13,7 +13,7 @@ include = [
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.7",
