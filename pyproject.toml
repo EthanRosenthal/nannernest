@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "nannernest"
-version = "0.1.0"
+version = "0.1.1"
 description = "Optimal peanut butter and banana sandwiches"
 authors = ["Ethan Rosenthal <ethan@ethanrosenthal.com>"]
 readme = "README.md"
 homepage = "https://github.com/EthanRosenthal/nannernest"
 repository = "https://github.com/EthanRosenthal/nannernest"
 keywords = ["deep learning", "machine learning", "peanut butter", "banana", "sandwich"]
-license = "MIT"
+license = "GNU Affero General Public License v3"
 include = [
     "LICENSE"
 ]
