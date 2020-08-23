@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "nannernest"
 version = "0.1.0"
-description = "Arrange banana slices on a piece of bread in order to optimize banana coverage."
+description = "Optimal peanut butter and banana sandwiches"
 authors = ["Ethan Rosenthal <ethan@ethanrosenthal.com>"]
 readme = "README.md"
 homepage = "https://github.com/EthanRosenthal/nannernest"
@@ -16,6 +16,8 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
 ]
 
 [tool.poetry.scripts]
