@@ -20,7 +20,8 @@ def cli(
         ..., help="Image file which contains bread and banana"
     ),
     num_slices: int = typer.Option(
-        22, help="Total number of slices to cut the banana into. This number defines the slice thickness."
+        22,
+        help="Total number of slices to cut the banana into. This number defines the slice thickness.",
     ),
     mask_threshold: float = typer.Option(0.6, help="Threshold of segmentation mask."),
     peel_scaler: float = typer.Option(

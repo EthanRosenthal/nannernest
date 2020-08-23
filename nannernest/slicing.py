@@ -287,12 +287,7 @@ def run(
     banana_centroid = calc_banana_centroid(mask, mask_threshold)
 
     slices = angular_slice(
-        mask,
-        banana_circle,
-        banana_centroid,
-        mask_threshold,
-        ellipse_ratio,
-        num_slices,
+        mask, banana_circle, banana_centroid, mask_threshold, ellipse_ratio, num_slices,
     )
 
     for s in slices:
