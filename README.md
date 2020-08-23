@@ -10,23 +10,32 @@ A small package for optimizing banana coverage on peanut butter and banana sandw
 
 ## Installation
 
-Unfortunately, one of the dependencies, [nest2D](https://github.com/markfink/nest2D), is a pain to install (it has a bunch of C dependencies), so I am unable to publish this package to PyPi right now. I have an open [PR](https://github.com/markfink/nest2D/pull/2) to hopefully solve some of the C issues, and then I will publish to PyPi.
+`nannernest` is generally pip installable. Due to some C dependencies with the nesting library that I use [nest2D](https://github.com/markfink/nest2D), along with an outstanding [PR](https://github.com/markfink/nest2D/pull/2), I would recommend the following way to install everything:
 
-In the meantime, you can install the package locally.
+ First, make sure you have [boost](https://www.boost.org/) and [cmake](https://cmake.org/) installed. If you are on Linux, then you may have `cmake` installed, and you can install `boost` with 
  
- First, install [boost](https://www.boost.org/) and [cmake](https://cmake.org/). I installed them on my Mac as follows:
-
-```commandline
+ ```commandline
+sudo apt-get install libboost-all-dev 
+```
+ 
+ I'm on a Mac, and I installed `cmake` with conda and `boost` with brew:
+ 
+ ```commandline
 conda install cmake
 brew install boost
 ```
 
-After that, git clone this repo and use [poetry](https://python-poetry.org/docs/) to install the package.
+Next, pip install my fork of `nest2D`:
 
 ```commandline
-poetry install
+pip install git+https://github.com/EthanRosenthal/nest2D.git@download-dependencies
 ```
 
+Finally, pip install `nannernest`
+
+```commandline
+pip install nannenest
+```
 
 ## Usage
 
