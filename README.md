@@ -55,10 +55,10 @@ Arguments:
   IMAGE_PATH  Image file which contains bread and banana  [required]
 
 Options:
-  --num-slices INTEGER            Maxmimum number of banana slices to consider
-                                  [default: 16]
+  --num-slices INTEGER            Total number of slices to cut the banana
+                                  into. This number defines the slice
+                                  thickness.  [default: 22]
 
-  --banana-pct FLOAT              Percent of banana to cut up  [default: 75]
   --mask-threshold FLOAT          Threshold of segmentation mask.  [default:
                                   0.6]
 

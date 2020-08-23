@@ -20,9 +20,9 @@ def cli(
         ..., help="Image file which contains bread and banana"
     ),
     num_slices: int = typer.Option(
-        16, help="Maxmimum number of banana slices to consider"
+        22,
+        help="Total number of slices to cut the banana into. This number defines the slice thickness.",
     ),
-    banana_pct: float = typer.Option(75, help="Percent of banana to cut up"),
     mask_threshold: float = typer.Option(0.6, help="Threshold of segmentation mask."),
     peel_scaler: float = typer.Option(
         0.8,
@@ -59,7 +59,6 @@ def cli(
     with click_spinner.spinner():
         slices, banana_circle, banana_centroid, banana_skeleton = slicing.run(
             banana.mask,
-            banana_frac=banana_pct / 100,
             num_slices=num_slices,
             mask_threshold=mask_threshold,
             peel_scaler=peel_scaler,

@@ -188,14 +188,6 @@ def find_banana_termini(
     return start + sign * stem, end
 
 
-def calc_slicing_end(start: int, end: int, slice_end_frac: float) -> int:
-    angular_length = end - start
-    # I think this actually all works out, regardless of whether or not
-    # start > end or end > start
-    slice_end = start + slice_end_frac * angular_length
-    return int(np.round(slice_end))
-
-
 def slice_bottom_top(
     profile_slices: np.ndarray, threshold: float
 ) -> Tuple[float, float]:
@@ -252,37 +244,30 @@ def angular_slice(
     banana_centroid: Tuple[float, float],
     mask_threshold: float,
     ratio: float,
-    banana_frac: float,
     num_slices: int,
 ) -> List[Slice]:
     phi_space = create_phi_space(banana_centroid, banana_circle, num_points=201)
     profiles = assemble_profiles(phi_space, mask, banana_circle, linewidth=2)
     start, end = find_banana_termini(profiles, mask_threshold)
-    slicing_end = calc_slicing_end(start, end, banana_frac)
 
-    # We'll throw out the first slice, so let's cut one extra.
     slices = assemble_slices(
-        num_slices + 1,
+        # We'll throw out the first  and last slice, so let's cut 2 extra.
+        num_slices + 2,
         start,
-        slicing_end,
+        end,
         phi_space,
         banana_circle,
         profiles,
         mask_threshold,
         ratio,
     )
-    # The first slice seems to catch the stem. Throw it out.
-    # TODO: Truly remove the stem. We might still want to throw out the actual
-    # first slice of banana because it'll be all cone like.
-    # Alternatively, allow user to knock out slices that are on the stem or too
-    # close to the end.
-    return slices[1:]
+    # Throw out the first and last slices.
+    return slices[1:-1]
 
 
 def run(
     mask: np.ndarray,
-    banana_frac: float = 0.75,
-    num_slices: int = 16,
+    num_slices: int = 22,
     peel_scaler: float = 0.8,
     mask_threshold: float = 0.6,
     ellipse_ratio: float = 0.85,
@@ -302,13 +287,7 @@ def run(
     banana_centroid = calc_banana_centroid(mask, mask_threshold)
 
     slices = angular_slice(
-        mask,
-        banana_circle,
-        banana_centroid,
-        mask_threshold,
-        ellipse_ratio,
-        banana_frac,
-        num_slices,
+        mask, banana_circle, banana_centroid, mask_threshold, ellipse_ratio, num_slices,
     )
 
     for s in slices:
