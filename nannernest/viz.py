@@ -129,13 +129,13 @@ def plot(
     mask_color: Optional[List[float]] = None,
     output: Optional[str] = "perfect_sandwich.jpg",
     show: bool = False,
-):
+    dpi: int = 80,
+) -> Optional[Axes]:
 
     # Default color is green   [  R,   G,   B]
     mask_color = mask_color or [0.0, 1.0, 0.0]
 
     # The figure scaling stuff is from https://stackoverflow.com/a/34769840
-    dpi = 80
     height, width, _ = np.array(image).shape
 
     # What size does the figure need to be in inches to fit the image?
