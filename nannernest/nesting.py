@@ -116,8 +116,6 @@ def max_slices(items, box):
 def nest(polygons, bread_box):
     L_x = int(bread_box.width)
     L_y = int(bread_box.height)
-    # L_x = int(bread.box[2] - bread.box[0])
-    # L_y = int(bread.box[3] - bread.box[1])
     svg_scaler = _NEST_L / L_x
     items = polygons_to_nest_items(polygons, svg_scaler)
     box = nest2D.Box(_NEST_L, int(_NEST_L * L_y / L_x))
@@ -132,8 +130,6 @@ def assign_nested_coords(
     slices: List[Slice], svg_file: str, bread_box: BoundingBox
 ) -> List[Slice]:
     Y_MAX = 210
-    # L_x = int(bread.box[2] - bread.box[0])
-    # L_y = int(bread.box[3] - bread.box[1])
     L_x = int(bread_box.width)
     L_y = int(bread_box.height)
     L_y_mm = _NEST_L * L_y / L_x / _MM_IN_COORD_UNITS
