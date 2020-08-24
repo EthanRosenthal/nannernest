@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nannernest"
-version = "0.1.3"
+version = "0.1.4"
 description = "Optimal peanut butter and banana sandwiches"
 authors = ["Ethan Rosenthal <ethan@ethanrosenthal.com>"]
 readme = "README.md"
