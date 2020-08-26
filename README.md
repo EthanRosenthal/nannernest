@@ -10,6 +10,8 @@ A small package for optimizing banana coverage on peanut butter and banana sandw
 
 ## Installation
 
+Python 3.7+ is required.
+
 `nannernest` is generally pip installable. Due to some C dependencies with the nesting library that I use [nest2D](https://github.com/markfink/nest2D), along with an outstanding [PR](https://github.com/markfink/nest2D/pull/2), I would recommend the following way to install everything:
 
  First, make sure you have [boost](https://www.boost.org/) and [cmake](https://cmake.org/) installed. If you are on Linux, then you may have `cmake` installed, and you can install `boost` with 
