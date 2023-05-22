@@ -7,7 +7,7 @@ future==0.18.2
 imageio==2.9.0
 kiwisolver==1.2.0
 matplotlib==3.3.0
-mpmath==1.1.0
+mpmath==1.3.0
 -e git+git@github.com:EthanRosenthal/nest2D.git@52285ad626c7d9f9a190f1891c60aa112cb931dc#egg=nest2d
 networkx==2.4
 numpy==1.19.1
