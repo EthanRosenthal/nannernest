@@ -3,7 +3,7 @@ click-spinner==0.1.10
 colorama==0.4.3
 cycler==0.10.0
 decorator==4.4.2
-future==0.18.2
+future==0.18.3
 imageio==2.9.0
 kiwisolver==1.2.0
 matplotlib==3.3.0
